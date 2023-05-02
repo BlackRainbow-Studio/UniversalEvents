@@ -13,7 +13,7 @@
         {
             foreach (var extEventProperty in extEventProperties)
             {
-                var listeners = extEventProperty.FindPropertyRelative(nameof(BaseExtEvent._persistentListeners));
+                var listeners = extEventProperty.FindPropertyRelative(nameof(BaseUniversalEvent._persistentListeners));
 
                 int listenersLength = listeners.arraySize;
 

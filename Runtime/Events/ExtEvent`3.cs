@@ -5,7 +5,7 @@
     using JetBrains.Annotations;
 
     [Serializable]
-    public class ExtEvent<T1, T2, T3> : BaseExtEvent
+    public class ExtEvent<T1, T2, T3> : BaseUniversalEvent
     {
         private readonly unsafe void*[] _arguments = new void*[3];
 

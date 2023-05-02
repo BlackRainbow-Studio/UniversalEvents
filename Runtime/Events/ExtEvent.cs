@@ -4,7 +4,7 @@
     using JetBrains.Annotations;
 
     [Serializable]
-    public class ExtEvent : BaseExtEvent
+    public class ExtEvent : BaseUniversalEvent
     {
         protected override Type[] EventParamTypes => Type.EmptyTypes;
 

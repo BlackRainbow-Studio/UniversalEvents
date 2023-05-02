@@ -8,7 +8,7 @@
     /// invoked, so that those names are shown in the editor UI. It allows users to better understand which arguments
     /// to assign to a listener when adding a listener through editor UI.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Field, AllowMultiple = false), BaseTypeRequired(typeof(BaseExtEvent))]
+    [AttributeUsage(AttributeTargets.Field, AllowMultiple = false), BaseTypeRequired(typeof(BaseUniversalEvent))]
     public class EventArgumentsAttribute : Attribute
     {
         /// <summary>

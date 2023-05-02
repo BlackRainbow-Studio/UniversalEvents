@@ -12,7 +12,7 @@
     /// An event whose listeners can be configured through editor UI.
     /// </summary>
     [Serializable]
-    public abstract class BaseExtEvent
+    public abstract class BaseUniversalEvent
     {
         [SerializeField] internal PersistentListener[] _persistentListeners;
 

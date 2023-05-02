@@ -256,7 +256,7 @@
         {
             // the method cannot be used if it contains at least one argument that is not serializable nor it is passed from the event.
             return declaringType.GetMethods(bindingFlags)
-                .Where(method => BaseExtEvent.MethodIsEligible(method, eventParamTypes, EditorPackageSettings.IncludeInternalMethods, EditorPackageSettings.IncludePrivateMethods));
+                .Where(method => BaseUniversalEvent.MethodIsEligible(method, eventParamTypes, EditorPackageSettings.IncludeInternalMethods, EditorPackageSettings.IncludePrivateMethods));
         }
 
         private static void OnMethodChosen(MethodInfo previousMethod, MethodInfo newMethod, SerializedProperty listenerProperty)

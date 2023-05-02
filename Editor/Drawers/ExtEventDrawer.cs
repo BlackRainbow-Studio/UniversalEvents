@@ -9,7 +9,7 @@
     using UnityEngine;
     using UnityEngine.Events;
 
-    [CustomPropertyDrawer(typeof(BaseExtEvent), true)]
+    [CustomPropertyDrawer(typeof(BaseUniversalEvent), true)]
     public class ExtEventDrawer : PropertyDrawer
     {
         private static readonly Dictionary<(SerializedObject, string), ExtEventInfo> _extEventInfoCache =
@@ -87,7 +87,7 @@
 
             var listenersProperty = extEventProperty.FindPropertyRelative(nameof(ExtEvent._persistentListeners));
 
-            var reorderableList = new FoldoutList(listenersProperty, label, extEventProperty.FindPropertyRelative(nameof(BaseExtEvent.Expanded)))
+            var reorderableList = new FoldoutList(listenersProperty, label, extEventProperty.FindPropertyRelative(nameof(BaseUniversalEvent.Expanded)))
             {
                 DrawElementCallback = (rect, index) => EditorGUI.PropertyField(rect, listenersProperty.GetArrayElementAtIndex(index)),
                 ElementHeightCallback = index =>

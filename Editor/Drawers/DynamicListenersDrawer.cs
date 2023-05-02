@@ -15,12 +15,12 @@
     {
         public static float GetHeight(SerializedProperty extEventProperty)
         {
-            bool isEventExpanded = extEventProperty.FindPropertyRelative(nameof(BaseExtEvent.Expanded)).boolValue;
+            bool isEventExpanded = extEventProperty.FindPropertyRelative(nameof(BaseUniversalEvent.Expanded)).boolValue;
 
             if (!isEventExpanded)
                 return 0f;
 
-            var eventObject = PropertyObjectCache.GetObject<BaseExtEvent>(extEventProperty);
+            var eventObject = PropertyObjectCache.GetObject<BaseUniversalEvent>(extEventProperty);
 
             if (eventObject._dynamicListeners == null)
                 return 0f;
@@ -32,12 +32,12 @@
         {
             using var _ = EditorGUIHelper.IndentLevelBlock(EditorGUI.indentLevel + 2);
 
-            bool isEventExpanded = extEventProperty.FindPropertyRelative(nameof(BaseExtEvent.Expanded)).boolValue;
+            bool isEventExpanded = extEventProperty.FindPropertyRelative(nameof(BaseUniversalEvent.Expanded)).boolValue;
 
             if (!isEventExpanded)
                 return;
 
-            var eventObject = PropertyObjectCache.GetObject<BaseExtEvent>(extEventProperty);
+            var eventObject = PropertyObjectCache.GetObject<BaseUniversalEvent>(extEventProperty);
             if (eventObject._dynamicListeners == null)
                 return;
 
